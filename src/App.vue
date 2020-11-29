@@ -7,30 +7,27 @@ export default {
   components: {
     Window,
     WindowBar,
-  },
-  beforeMount() {
-    this.$vuetify.theme.dark = true
   }
 };
 </script>
 
 <template>
   <v-app class="application--toolbar">
-    <WindowBar />
+    <WindowBar/>
     <v-card class="top-indent">
       <v-card-text>
-        <Window />
+        <window></window>
       </v-card-text>
     </v-card>
   </v-app>
 </template>
 
 <style scoped>
-  .top-indent {
-    position: fixed;
-    height: 100vh;
-    padding-top: 25px;
-    width: 100%;
-    overflow-y: auto;
-  }
+.top-indent {
+  position: fixed;
+  height: 100vh;
+  padding-top: 25px;
+  width: 100%;
+  overflow-y: auto;
+}
 </style>

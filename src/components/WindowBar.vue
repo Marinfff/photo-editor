@@ -1,5 +1,5 @@
 <script>
-import { ipcRenderer } from 'electron';
+import {ipcRenderer} from 'electron';
 
 export default {
   name: 'WindowHeader',
@@ -13,26 +13,27 @@ export default {
 
 <template>
   <v-system-bar
-    fixed
     class="top"
-    color="grey darken-4"
-    height="30"
+    color="purple"
+    fixed
     flat
+    height="30"
   >
-    <v-icon>mdi-database</v-icon>
-    <span class="pl-2">App</span>
+    <v-icon color="white">mdi-store</v-icon>
+    <span class="white--text pl-2">Photostore</span>
     <div class="flex-grow-1"></div>
-    <v-icon small class="icon pr-1" @click="ipcRenderer.send('minimize')">mdi-window-minimize</v-icon>
-    <v-icon small class="icon pr-1" @click="ipcRenderer.send('maximize')">mdi-window-maximize</v-icon>
-    <v-icon small class="icon" @click="ipcRenderer.send('close')">mdi-window-close</v-icon>
+    <v-icon color="white" class="icon pr-1" small @click="ipcRenderer.send('minimize')">mdi-window-minimize</v-icon>
+    <v-icon color="white" class="icon pr-1" small @click="ipcRenderer.send('maximize')">mdi-window-maximize</v-icon>
+    <v-icon color="white" class="icon" small @click="ipcRenderer.send('close')">mdi-window-close</v-icon>
   </v-system-bar>
 </template>
 
 <style scoped>
-  .top {
-    -webkit-app-region: drag;
-  }
-  .icon {
-    -webkit-app-region: no-drag;
-  }
+.top {
+  -webkit-app-region: drag;
+}
+
+.icon {
+  -webkit-app-region: no-drag;
+}
 </style>
